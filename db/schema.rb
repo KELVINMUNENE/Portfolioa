@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170813161842) do
+ActiveRecord::Schema.define(version: 20170813163820) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "joins", force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "skill_id"
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
