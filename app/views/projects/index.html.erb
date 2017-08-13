@@ -1,1 +1,24 @@
-index.html.erb
+<h1>Projects</h1>
+<a href="<%= new_project_path %>">New Project</a>
+<div class="row">
+  <div class="chip">
+    <ul>
+      <% @projects.each do |project|%>
+      <li>
+        <div class="image">
+          <%= image_tag project.picture_url.to_s, class:"responsive-img" %><br>
+        </div>
+        <div class="name">
+          <%= link_to project.name, project_path(project) %><br>
+        </div>
+        <div class="link">
+          by <%= project.project_link %><br>
+        </div>
+        <div class="desc">
+          <%= project.description %><br>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
