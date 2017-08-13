@@ -5,6 +5,33 @@
 <div class="name">
   <%= @project.name %><br>
 </div>
+<div class="link">
+  by
+  <%= @project.link %><br>
+</div>
+<div class="desc">
+  <%= @project.description %><br>
+</div>
+
+<h3>Skills used in
+  <%= @project.name %></h3>
+<ul>
+  <% @skills.each do |skill| %>
+  <li><%= skill.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit Project', edit_project_path(@project)%>
+<%= link_to "Delete Project", project_path(@project),
+                  :data => {:confirm => "You sure?",
+                              :method => "delete"}%>
+<h1><%= @project.name %></h1>
+<div class="image">
+  <%= image_tag @project.picture_url.to_s, class:"responsive-img" %><br>
+</div>
+<div class="name">
+  <%= @project.name %><br>
+</div>
 <div class="project_link">
   by
   <%= @project.project_link %><br>
