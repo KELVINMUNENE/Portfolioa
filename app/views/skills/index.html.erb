@@ -1,1 +1,19 @@
-index.html.erb
+<h1>Skillss</h1>
+<a href="<%= new_skill_path %>">New Skill</a>
+<div class="row">
+  <div class="chip">
+    <ul>
+      <% @skills.each do |skill|%>
+      <li>
+        <div class="name">
+          <%= skill.name %>
+        </div>
+        <div class="rating">
+          <%= skill.rating %>
+        </div>
+      
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
