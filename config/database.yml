@@ -2,15 +2,15 @@ default: &default
     adapter: postgresql
     encoding: unicode
 
-  development:
+development:
     <<: *default
     database: about_me_development
 
-  test:
+test:
     <<: *default
     database: about_me_test
 
-  production:
+production:
     <<: *default
     database: about_me_production
     username: about_me
