@@ -1,1 +1,2 @@
-skills.rb
+class Skill < ActiveRecord::Base
+end
