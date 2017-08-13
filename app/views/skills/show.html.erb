@@ -1,1 +1,14 @@
-show.html.erb
+<h1><%= @skill.name %></h1>
+<div class="name">
+  <%= @skill.name %>
+</div>
+<div class="rating">
+  <%= @skill.rating %>
+</div>
+
+
+
+<%= link_to 'Edit Skill', edit_skill_path(@skill)%>
+<%= link_to "Delete Skill", skill_path(@skill),
+                  :data => {:confirm => "You sure?",
+                              :method => "delete"}%>
